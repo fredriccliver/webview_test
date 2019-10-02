@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:html/parser.dart';
-import 'package:provider/provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:provider/provider.dart';
 
 // Todo: have to prevent open 'hotels.com' in hotel.com native app.
 // Todo: change the _blank target. bypass the opening in new tab while browsing.
@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
     // WebViewController _webviewController;
     final Completer<WebViewController> webviewController =
         Completer<WebViewController>();
-    String homeUrl = 'https://google.com';
+    String homeUrl = 'https://instagram.com';
     final urlBarController = TextEditingController(text: '');
     // String CurrentUrl = '';
     // WebViewController controller;
@@ -81,7 +81,6 @@ class _MyAppState extends State<MyApp> {
                           urlBarController.text = cont.currentUrl().toString();
                         },
                         onPageFinished: (String url) {
-                          urlmanager._webViewController.evaluateJavascript("window.open = function(open) { return function (url, name, features) { window.location.href = url; return window; }; } (window.open);");
                           print('url changed : ' + url);
                           urlBarController.text = url;
                           urlmanager.updateUrl(url);

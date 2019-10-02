@@ -19,12 +19,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # webview_flutter:
+  webview_flutter:
   provider:
   html:
-  webview_flutter:
-    path: ./plugin/webview_flutter/
-  
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -32,8 +29,6 @@ dependencies:
 
 dev_dependencies:
   flutter_test:
-    sdk: flutter
-  flutter_driver:
     sdk: flutter
 
 
